@@ -86,7 +86,7 @@ class Command(BaseCommand):
             return
 
         prompt = f"""
-        Analyze the following HTML content. Extract the 20 most recent articles.
+        Analyze the following HTML content. Extract the 5 most recent articles.
         Your response MUST be a single, valid JSON object.
         The JSON object must have one key: "articles", a list of objects, each with keys: "title", "summary", "source_url".
         The summary should describe the article as briefly as possible while capturing the main idea.
