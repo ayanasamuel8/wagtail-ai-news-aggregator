@@ -146,3 +146,10 @@ This project was built with professional Django and Wagtail conventions in mind.
 *   **Management Commands:** All operational logic (scraping) is encapsulated in a management command (`scrape_news_gemini`). This makes the script reusable, testable, and easy to schedule with tools like `cron`.
 *   **Professional Logging:** The scraper command uses Python's `logging` framework instead of `print()` statements. This is configured in the Django settings to output to both the console and a `logs/scraper.log` file, which is essential for debugging automated tasks.
 *   **Security:** The `.gitignore` file is configured to ignore sensitive files like `.env`, `db.sqlite3`, and `__pycache__` directories, ensuring no secrets or environment-specific data is ever committed to version control.
+
+>## Screen Shots
+>### Main Page
+![alt text](images/image.png)
+
+>### Pagination
+![alt text](images/image-1.png)

@@ -15,7 +15,7 @@ import os
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
-LOGS_DIR = os.path.join(os.path.dirname(BASE_DIR), 'news_site/logs')
+LOGS_DIR = os.path.join(os.path.dirname(BASE_DIR), 'logs')
 if not os.path.exists(LOGS_DIR):
     os.makedirs(LOGS_DIR)
 
@@ -142,7 +142,7 @@ LOGGING = {
         },
     },
     'loggers': {
-        'news.management.commands.scrape_news_gemini': {
+        'news.management.commands.scrape_news': {
             'handlers': ['console', 'file'],
             'level': 'INFO',
             'propagate': True,
