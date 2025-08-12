@@ -1,0 +1,96 @@
+/* ===== Base Styling ===== */
+body {
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+    background-color: #f8f9fb;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===== Header ===== */
+header h3 {
+    font-weight: 700;
+    color: #0d6efd;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* ===== Page Title ===== */
+.page-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #222;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* ===== News Cards ===== */
+.news-card {
+    background: #fff;
+    border: none;
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease-in-out;
+}
+
+.news-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Card Title ===== */
+.news-card .card-title a {
+    text-decoration: none;
+    color: #0d6efd;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.news-card .card-title a:hover {
+    color: #084298;
+}
+
+/* ===== Publication Date ===== */
+.news-card .card-subtitle {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+/* ===== Card Summary ===== */
+.news-card .card-text {
+    margin-top: 0.75rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* ===== Buttons ===== */
+.news-card .btn {
+    margin-top: 1rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    padding: 0.4rem 0.9rem;
+}
+
+/* ===== Pagination ===== */
+.pagination .page-link {
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+    color: #0d6efd;
+    transition: all 0.3s ease;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.pagination .page-link:hover {
+    background-color: #e9ecef;
+}
+
+/* ===== Footer ===== */
+footer {
+    font-size: 0.875rem;
+}

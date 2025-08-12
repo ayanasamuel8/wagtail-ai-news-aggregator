@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+
+{% block content %}
+    <h1 class="page-title">{{ page.title }}</h1>
+
+    <div class="container">
+        {% for article in articles %}
+            <div class="news-card">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <a href="{{ article.source_url }}" target="_blank" rel="noopener noreferrer">
+                            {{ article.title }}
+                        </a>
+                    </h5>
+                    <h6 class="card-subtitle mb-2">
+                        Published on: {{ article.publication_date|date:"F j, Y" }}
+                    </h6>
+                    <p class="card-text">{{ article.summary }}</p>
+                    <a href="{{ article.source_url }}" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
+                        Read Original Article
+                    </a>
+                </div>
+            </div>
+        {% empty %}
+            <div class="alert alert-info">
+                <p>No news articles have been scraped yet. Run the scraper to populate this page.</p>
+            </div>
+        {% endfor %}
+
+        {% if articles.paginator.num_pages > 1 %}
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+                {% if articles.has_previous %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ articles.previous_page_number }}">Previous</a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="True">Previous</a>
+                    </li>
+                {% endif %}
+
+                <li class="page-item active" aria-current="page">
+                    <span class="page-link">
+                        Page {{ articles.number }} of {{ articles.paginator.num_pages }}
+                    </span>
+                </li>
+
+                {% if articles.has_next %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ articles.next_page_number }}">Next</a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="True">Next</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
+        {% endif %}
+
+    </div>
+{% endblock %}

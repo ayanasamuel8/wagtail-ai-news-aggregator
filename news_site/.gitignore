@@ -1,0 +1,36 @@
+# --- Secrets ---
+# Ignore the file containing environment variables and secret keys.
+.env
+
+# --- Python ---
+# Ignore virtual environment folders.
+venv/
+env/
+.venv/
+
+# Ignore Python bytecode and compiled files.
+*.pyc
+__pycache__/
+
+# --- Django ---
+# Ignore the local SQLite database. User data and all content lives here.
+*.sqlite3
+db.sqlite3
+
+# Ignore log files.
+*.log
+
+# Ignore static files that are collected for deployment.
+# Your source static files in your apps should NOT be ignored.
+/static/
+
+# Ignore media files uploaded by users.
+/media/
+
+# --- IDE/OS Specific ---
+# Ignore editor-specific settings files.
+.vscode/
+.idea/
+
+# Ignore macOS specific files.
+.DS_Store
