@@ -149,7 +149,7 @@ This project was built with professional Django and Wagtail conventions in mind.
 
 >## Screen Shots
 >### Main Page
-![alt text](images/image.png)
+![alt text](news_site/images/image.png)
 
 >### Pagination
-![alt text](images/image-1.png)
+![alt text](news_site/images/image-1.png)
